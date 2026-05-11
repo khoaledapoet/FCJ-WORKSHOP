@@ -1,57 +1,29 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-01
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master AWS CLI administration directly on EC2 and optimize costs with Amazon Lightsail.
+* Deploy static website hosting (S3), relational databases (RDS), configure Auto Scaling, system monitoring (CloudWatch), and DNS resolution (Route 53).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mon** | **Storage & Compute Optimization:**<br>- Practice configuring and hosting static websites on Amazon S3.<br>- Learn and deploy cost-optimized virtual servers for small projects with Amazon Lightsail. | 04/27/2026 | 04/27/2026 | [Reference 1](https://000057.awsstudygroup.com/)<br>[Reference 2](https://000045.awsstudygroup.com/) |
+| **Tue** | **CLI & Automation on EC2:**<br>- Install and operate AWS CLI directly on Amazon EC2 servers (Windows/Ubuntu).<br>- Apply IAM Roles to EC2 for secure CLI command execution without hard-coding Access Keys. | 04/28/2026 | 04/28/2026 | [Reference 1](https://000011.awsstudygroup.com/) |
+| **Wed** | **Managed Database Services:**<br>- Provision and configure high-availability relational databases on Amazon RDS.<br>- Set up secure internal network connections (Security Groups) from EC2 servers to RDS. | 04/29/2026 | 04/29/2026 | [Reference 1](https://000005.awsstudygroup.com/) |
+| **Thu** | **Auto Scaling & Monitoring:**<br>- Set up resource monitoring systems with Amazon CloudWatch.<br>- Configure server auto-scaling groups based on monitoring metrics. | 04/30/2026 | 04/30/2026 | [Reference 1](https://000008.awsstudygroup.com/)<br>[Reference 2](https://000006.awsstudygroup.com/) |
+| **Fri** | **Advanced Networking (DNS):**<br>- Set up an integrated hybrid DNS system between Local (On-premise) and Amazon VPC environments using Amazon Route53. | 05/01/2026 | 05/01/2026 | [Reference 1](https://000010.awsstudygroup.com/) |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Static Storage & Server Admin:** Proficiently configured AWS CLI within the EC2 operating system (Windows/Ubuntu). Mastered Bucket Policies for public S3 web hosting and understood compute cost optimization via Lightsail.
+* **Cloud Database:** Successfully provisioned Amazon RDS, solving the secure internal connection challenge between the backend (EC2) and database (RDS) without exposing it to the public internet.
+* **Automation & Monitoring:** Successfully combined CloudWatch (metric monitoring, alarms) with EC2 Auto Scaling. The system can now automatically scale out servers during high load and scale in during low load.
+* **DNS Architecture:** Understood Route 53 configuration, established Hosted Zones, and resolved Hybrid DNS communication challenges between Local infrastructure and the Cloud VPC environment.

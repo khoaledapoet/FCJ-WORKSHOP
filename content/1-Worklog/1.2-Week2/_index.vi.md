@@ -1,59 +1,29 @@
 ---
-title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+title: "Báo cáo Tuần 2"
+date: 2026-05-01
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 2:
 
-### Mục tiêu tuần 2:
+* Nắm vững cách quản trị AWS CLI trực tiếp trên EC2 và tối ưu chi phí với Amazon Lightsail.
+* Triển khai lưu trữ website tĩnh (S3), cơ sở dữ liệu quan hệ (RDS), thiết lập tự động co giãn (Auto Scaling), giám sát hệ thống (CloudWatch) và phân giải tên miền (Route 53).
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc đã thực hiện:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc đã làm | Ngày BĐ | Ngày HT | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| **Hai** | **Storage & Compute Optimization:**<br>- Thực hành cấu hình và lưu trữ trang web tĩnh trên Amazon S3 (Hosting static website with Amazon S3).<br>- Tìm hiểu và triển khai máy chủ ảo tối ưu chi phí cho dự án nhỏ với Amazon Lightsail. | 27/04/2026 | 27/04/2026 | [Link 1](https://000057.awsstudygroup.com/)<br>[Link 2](https://000045.awsstudygroup.com/) |
+| **Ba** | **CLI & Automation on EC2:**<br>- Cài đặt và thao tác với AWS CLI trực tiếp trên máy chủ Amazon EC2 (Windows/Ubuntu) (Using AWS CLI on Amazon EC2).<br>- Áp dụng IAM Role cho EC2 để thực thi các lệnh CLI an toàn mà không cần cấu hình Access Key cứng. | 28/04/2026 | 28/04/2026 | [Link 1](https://000011.awsstudygroup.com/) |
+| **Tư** | **Managed Database Services:**<br>- Khởi tạo và cấu hình cơ sở dữ liệu quan hệ có độ sẵn sàng cao trên Amazon RDS (Create a database on Amazon RDS).<br>- Thiết lập kết nối mạng nội bộ an toàn (Security Groups) từ máy chủ EC2 vào RDS. | 29/04/2026 | 29/04/2026 | [Link 1](https://000005.awsstudygroup.com/) |
+| **Năm** | **Auto Scaling & Monitoring:**<br>- Thiết lập hệ thống giám sát tài nguyên với Amazon CloudWatch (Create System Monitor with Amazon Cloudwatch).<br>- Cấu hình nhóm tự động co giãn máy chủ dựa trên số liệu giám sát (Automate Application Scaling with Amazon EC2 Autoscaling). | 30/04/2026 | 30/04/2026 | [Link 1](https://000008.awsstudygroup.com/)<br>[Link 2](https://000006.awsstudygroup.com/) |
+| **Sáu** | **Advanced Networking (DNS):**<br>- Thiết lập hệ thống phân giải tên miền (DNS) lai tích hợp giữa môi trường Local (On-premise) và Amazon VPC bằng Amazon Route53 (Set up an integrated hybrid DNS system with Amazon Route53). | 01/05/2026 | 01/05/2026 | [Link 1](https://000010.awsstudygroup.com/) |
 
+### Kết quả đạt được:
 
-### Kết quả đạt được tuần 2:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Lưu trữ tĩnh & Quản trị máy chủ:** Cấu hình thành thạo AWS CLI ngay bên trong hệ điều hành của EC2 (Windows/Ubuntu). Nắm vững cơ chế quyền (Bucket Policy) để public một trang web tĩnh host trên Amazon S3 và hiểu cách tối ưu chi phí điện toán bằng Lightsail.
+* **Cơ sở dữ liệu đám mây:** Tự tay khởi tạo thành công Amazon RDS, giải quyết được bài toán kết nối bảo mật nội bộ giữa backend (EC2) và database (RDS) mà không đưa database ra ngoài public internet.
+* **Tự động hóa & Giám sát:** Vận dụng thành công sự kết hợp giữa CloudWatch (giám sát metric, tạo cảnh báo) và EC2 Auto Scaling. Hệ thống đã có khả năng tự động "đẻ" thêm máy chủ khi tải cao và xóa bớt đi khi tải thấp.
+* **Kiến trúc mạng DNS:** Hiểu rõ cách cấu hình Route 53, thiết lập các Hosted Zones và giải quyết bài toán giao tiếp lai (Hybrid DNS) giữa hạ tầng Local và môi trường VPC trên Cloud.

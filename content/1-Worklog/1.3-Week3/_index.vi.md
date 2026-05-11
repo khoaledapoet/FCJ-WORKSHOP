@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+title: "Báo cáo Tuần 3"
+date: 2026-05-08
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 3:
 
-### Mục tiêu tuần 3:
+* Tích hợp trợ lý AI (AWS Kiro) vào quy trình phát triển.
+* Quản lý, phân bổ và tối ưu hóa chi phí AWS kết hợp với việc đánh dấu tài nguyên (Tag/Resource Groups).
+* Thực hành di dời hạ tầng (VM & Database), thiết lập giám sát trực quan với Grafana và tự động hóa quy trình tắt/mở máy chủ.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc đã thực hiện:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc đã làm | Ngày BĐ | Ngày HT | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| **Hai** | **Generative AI for Builders:**<br>- Tìm hiểu tác động của Gen AI (AWS Kiro) tới SDLC và phương pháp Spec-driven development.<br>- Làm quen với Kiro IDE, Kiro CLI và hệ sinh thái Kiro Power. | 04/05/2026 | 04/05/2026 | Module 01-03 Gen AI on AWS - Kiro |
+| **Ba** | **Cost Optimization & Resource Management:**<br>- Nghiên cứu các chiến lược tối ưu chi phí: Right-sizing, Spot Instances, Reserved/Savings Plans.<br>- Thực hành: Quản lý tài nguyên tập trung và phân bổ chi phí bằng cách sử dụng Tag và Resource Groups. | 05/05/2026 | 05/05/2026 | Module 01-04 Cost optimization on AWS |
+| **Tư** | **Infrastructure & Database Migration:**<br>- Di dời máy chủ ảo từ môi trường cục bộ lên đám mây (Migrate virtual servers with AWS VM Import/Export).<br>- Chuyển đổi lược đồ và di dời cơ sở dữ liệu (Database Migration with AWS DMS and SCT). | 06/05/2026 | 06/05/2026 | [Link 1](https://000014.awsstudygroup.com/)<br>[Link 2](https://000043.awsstudygroup.com/) |
+| **Năm** | **Advanced System Monitoring:**<br>- Tích hợp dữ liệu CloudWatch vào Grafana để xây dựng bảng điều khiển trực quan.<br>- Thiết lập theo dõi sức khỏe hệ thống theo thời gian thực (Create System Monitor with Amazon Cloudwatch and Grafana). | 07/05/2026 | 07/05/2026 | [Link 1](https://000029.awsstudygroup.com/) |
+| **Sáu** | **Cost Optimization via Automation:**<br>- Ứng dụng bài học tối ưu chi phí vào thực tế bằng cách viết hàm tự động tắt máy chủ ngoài giờ làm việc.<br>- Thiết lập cảnh báo và thông báo trạng thái qua Slack (Automated server shutdown and Slack messaging with AWS Lambda). | 08/05/2026 | 08/05/2026 | [Link 1](https://000022.awsstudygroup.com/) |
 
+### Kết quả đạt được:
 
-### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Tích hợp Gen AI:** Hiểu rõ khả năng của AWS Kiro trong việc hỗ trợ viết code, tự động hóa tác vụ CI/CD qua terminal và xây dựng ứng dụng dựa trên đặc tả (Spec).
+* **Quản trị & Tối ưu Chi phí:** Áp dụng hiệu quả kiến thức lý thuyết về FinOps (giảm lãng phí tài nguyên) vào thực tiễn. Vận dụng kỹ thuật Tagging để tổ chức lại tài nguyên, giúp việc đo lường chi phí trên AWS Budgets chính xác đến từng dự án/phòng ban.
+* **Migration:** Nắm vững quy trình đóng gói máy chủ ảo nội bộ và import thành công lên Amazon EC2. Cấu hình thành công AWS DMS và SCT để đảm bảo dữ liệu toàn vẹn khi chuyển đổi database.
+* **Tự động hóa & Giám sát trực quan:** Vượt qua giới hạn của CloudWatch Dashboard bằng cách tích hợp Grafana. Lập trình thành công AWS Lambda kết hợp Webhook để tự động tắt hệ thống EC2 tiết kiệm tiền và báo cáo trực tiếp về ứng dụng chat Slack.
