@@ -1,57 +1,31 @@
 ---
 title: "Week 4 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-16
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master automation and resource governance via AWS Systems Manager and Infrastructure as Code (CloudFormation).
+* Implement strict security boundaries (IAM Permission Boundary, WAF, KMS, Security Hub).
+* Build scalable inter-network architectures (Transit Gateway, VPC Peering) and establish highly reliable backup plans (AWS Backup).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mon** | **Resource Governance:**<br>- Manage resources in groups with Tag and Resource Groups.<br>- Manage EC2 service access with Tag through IAM. | 05/11/2026 | 05/11/2026 | AWS Study Group |
+| **Tue** | **Management & Automation:**<br>- Service management and task automation using AWS Systems Manager.<br>- Connect securely via AWS Systems Manager - Session Manager.<br>- Initialize Infrastructure as Code with AWS CloudFormation. | 05/12/2026 | 05/12/2026 | AWS Study Group |
+| **Wed** | **Identity Security:**<br>- Set Single Sign-On (Amazon SSO / Identity Center) for the Organization.<br>- Limit User Permissions with IAM Permission Boundary.<br>- Limiting Role Transfer by Condition. | 05/13/2026 | 05/13/2026 | AWS Study Group |
+| **Thu** | **Advanced Security:**<br>- Key Management with Key Management Service (AWS KMS).<br>- Securing Applications and APIs with Web Application Firewall (AWS WAF).<br>- Check security benchmarks with AWS Security Hub. | 05/14/2026 | 05/14/2026 | AWS Study Group |
+| **Fri** | **System Reliability:**<br>- Implement a system backup plan with AWS Backup to ensure data durability. | 05/15/2026 | 05/15/2026 | AWS Study Group |
+| **Sat** | **Advanced Networking:**<br>- Linking Virtual Private Clouds (VPCs) with VPC Peering.<br>- Centrally manage connections with AWS Transit Gateway. | 05/16/2026 | 05/16/2026 | AWS Study Group |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Automation & IaC:** Mastered provisioning infrastructure programmatically using CloudFormation rather than manual web console clicks. Effectively utilized Systems Manager (Session Manager) for secure instance connectivity without exposing port 22 or managing SSH keys.
+* **Security & Identity:** Comprehended multi-layered security concepts. Established maximum permission caps using IAM Permission Boundary and SSO. Gained practical ability to protect real-world applications using WAF and encrypt sensitive data with KMS.
+* **Reliability & Backup:** Leveraged AWS Backup for automated scheduling, ensuring the architecture is highly resilient and capable of Disaster Recovery.
+* **Advanced Networking:** Progressed beyond isolated designs by building complex network topologies. Successfully interlinked multiple VPCs using Peering and centralized routing via Transit Gateway—a highly sought-after engineering skill.

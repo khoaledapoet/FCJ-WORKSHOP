@@ -1,57 +1,31 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-13
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Upgrade Microservices infrastructure using advanced container solutions: Amazon Lightsail Containers, AWS Fargate, and Amazon EKS (Kubernetes).
+* Automate application releases on Kubernetes via CI/CD pipelines integrating CodePipeline and GitHub.
+* Build a centralized Data Lake, perform data visualization (QuickSight), and get started with Machine Learning (SageMaker).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mon** | **Containers & Fargate:**<br>- Getting Started with Amazon Lightsail Containers.<br>- Monolith to Microservices with Docker and AWS Fargate. | 06/08/2026 | 06/08/2026 | AWS Lab Docs |
+| **Tue** | **Kubernetes Operations:**<br>- Get started with Amazon EKS orchestration. | 06/09/2026 | 06/09/2026 | AWS Lab Docs |
+| **Wed** | **CI/CD Automation:**<br>- CI/CD with CodePipeline.<br>- CI/CD on EKS with CodePipeline and GitHub integration. | 06/10/2026 | 06/10/2026 | AWS Lab Docs |
+| **Thu** | **Data Lake Architecture:**<br>- Building Data lake on AWS.<br>- Build Datalake with your data practically. | 06/11/2026 | 06/11/2026 | AWS Lab Docs |
+| **Fri** | **Data Analytics & BI:**<br>- Explore Data Analytics Services on AWS.<br>- Get started with Amazon QuickSight for business intelligence. | 06/12/2026 | 06/12/2026 | AWS Lab Docs |
+| **Sat** | **Machine Learning:**<br>- Get started with Amazon SageMaker for building and deploying ML models. | 06/13/2026 | 06/13/2026 | AWS Lab Docs |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Advanced Container Operations:** Flexibly utilized orchestration services from simple (Lightsail) to complex (EKS, Fargate). Effectively established secure Kubernetes clusters with proper network foundations.
+* **Kubernetes Automation:** Successfully integrated a CI/CD pipeline connecting GitHub directly to Amazon EKS, enabling automated image builds and zero-downtime container deployments.
+* **Data Governance & Analytics:** Mastered the workflow of ingesting raw data into a Data Lake, processing it through Analytics services, and publishing visual business intelligence dashboards via Amazon QuickSight.
+* **AI/Machine Learning:** Gained foundational knowledge of Amazon SageMaker, understanding the full lifecycle of cloud-based machine learning projects from data preparation to model deployment.

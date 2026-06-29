@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+title: "Báo cáo Tuần 9"
+date: 2026-06-20
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 9:
 
-### Mục tiêu tuần 9:
+* Tổng kết và hoàn thiện toàn bộ các bài thực hành (Labs) trong lộ trình đào tạo của FCAJ.
+* Lên ý tưởng, xác định phạm vi (scope) và các chức năng cốt lõi cho Dự án cuối kỳ (Capstone Project).
+* Thiết kế sơ đồ kiến trúc hệ thống (Architecture Diagram) chuẩn AWS cho dự án "Serverless Feedback Pipeline".
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc đã thực hiện:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc đã làm | Ngày BĐ | Ngày HT | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| **Hai** | **Program Wrap-up:**<br>- Rà soát và hoàn thành các task/lab còn tồn đọng của chương trình đào tạo FCAJ. | 15/06/2026 | 15/06/2026 | |
+| **Ba** | **Project Ideation:**<br>- Lên ý tưởng dự án cuối kỳ. Chọn đề tài: **Serverless Feedback Pipeline**.<br>- Phân tích yêu cầu bài toán: Thu thập, xử lý và lưu trữ phản hồi của người dùng tự động. | 16/06/2026 | 16/06/2026 | |
+| **Tư** | **Service Selection:**<br>- Lựa chọn các dịch vụ AWS phù hợp cho dự án (dự kiến: API Gateway, AWS Lambda, Amazon DynamoDB, Amazon SNS). | 17/06/2026 | 17/06/2026 | AWS Documentation |
+| **Năm** | **Architecture Design (Draft):**<br>- Phác thảo sơ đồ luồng dữ liệu (Data Flow) từ lúc Client gửi feedback đến khi hệ thống xử lý và gửi thông báo. | 18/06/2026 | 18/06/2026 | |
+| **Sáu** | **Architecture Diagramming:**<br>- Sử dụng công cụ vẽ sơ đồ chuyên dụng (Draw.io / AWS Architecture Icons) để vẽ sơ đồ kiến trúc hệ thống. | 19/06/2026 | 19/06/2026 | AWS Architecture Icons |
+| **Bảy** | **Project Proposal Review:**<br>- Hoàn thiện bản nháp đề xuất dự án (Project Proposal) kèm sơ đồ kiến trúc để chuẩn bị báo cáo với Mentor. | 20/06/2026 | 20/06/2026 | |
 
+### Kết quả đạt được:
 
-### Kết quả đạt được tuần 9:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Hoàn thành lộ trình đào tạo:** Nắm vững và thực hành thành công 100% các chủ đề kiến thức Cloud/DevOps cốt lõi mà chương trình FCAJ đề ra.
+* **Định hình dự án thực tế:** Chốt được ý tưởng dự án "Serverless Feedback Pipeline" mang tính ứng dụng cao, giải quyết bài toán xử lý phản hồi khách hàng tự động mà không cần quản lý máy chủ.
+* **Kỹ năng Thiết kế Giải pháp (Solutions Architecture):** Lựa chọn chính xác các dịch vụ phi máy chủ (Serverless) phù hợp để tối ưu chi phí và hiệu năng. Vẽ thành công sơ đồ kiến trúc hệ thống chuyên nghiệp, thể hiện rõ ràng luồng tương tác giữa các dịch vụ.

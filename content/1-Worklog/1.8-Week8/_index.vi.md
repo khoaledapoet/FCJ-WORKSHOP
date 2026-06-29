@@ -1,59 +1,31 @@
 ---
-title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+title: "Báo cáo Tuần 8"
+date: 2026-06-13
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 8:
 
-### Mục tiêu tuần 8:
+* Nâng cấp hạ tầng triển khai Microservices với các giải pháp Container nâng cao: Amazon Lightsail Containers, AWS Fargate và Amazon EKS (Kubernetes).
+* Tự động hóa quá trình phát hành ứng dụng trên nền tảng Kubernetes thông qua CI/CD với CodePipeline và GitHub.
+* Xây dựng kho lưu trữ dữ liệu tập trung (Data Lake), trực quan hóa dữ liệu (QuickSight) và làm quen với công nghệ Machine Learning (SageMaker).
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc đã thực hiện:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc đã làm | Ngày BĐ | Ngày HT | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| **Hai** | **Containers & Fargate:**<br>- Bắt đầu làm quen với Amazon Lightsail Containers.<br>- Chuyển đổi Monolith sang Microservices bằng Docker và triển khai không máy chủ với AWS Fargate. | 08/06/2026 | 08/06/2026 | Tài liệu Lab FCAJ |
+| **Ba** | **Kubernetes Operations:**<br>- Khởi tạo và làm quen với hệ thống điều phối container cấp độ doanh nghiệp (Get started with Amazon EKS). | 09/06/2026 | 09/06/2026 | Tài liệu Lab FCAJ |
+| **Tư** | **CI/CD Automation:**<br>- Xây dựng luồng CI/CD cơ bản với AWS CodePipeline.<br>- Thiết lập CI/CD tự động trên cụm EKS kết nối mã nguồn từ GitHub. | 10/06/2026 | 10/06/2026 | Tài liệu Lab FCAJ |
+| **Năm** | **Data Lake Architecture:**<br>- Nghiên cứu kiến trúc tổng thể xây dựng Data lake trên AWS.<br>- Thực hành đưa dữ liệu thực tế vào Data Lake (Build Datalake with your data). | 11/06/2026 | 11/06/2026 | Tài liệu Lab FCAJ |
+| **Sáu** | **Data Analytics & BI:**<br>- Khám phá hệ sinh thái các dịch vụ Phân tích dữ liệu (Data Analytics) trên AWS.<br>- Trực quan hóa dữ liệu kinh doanh với Amazon QuickSight. | 12/06/2026 | 12/06/2026 | Tài liệu Lab FCAJ |
+| **Bảy** | **Machine Learning:**<br>- Làm quen với nền tảng xây dựng, huấn luyện và triển khai mô hình học máy Amazon SageMaker. | 13/06/2026 | 13/06/2026 | Tài liệu Lab FCAJ |
 
+### Kết quả đạt được:
 
-### Kết quả đạt được tuần 8:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Quản trị Container chuyên sâu:** Vận dụng linh hoạt các dịch vụ điều phối từ đơn giản (Lightsail) đến phức tạp (EKS, Fargate). Khả năng thiết lập cụm Kubernetes chuẩn bảo mật, kết nối trơn tru với hạ tầng mạng.
+* **Tự động hóa trên Kubernetes:** Tích hợp thành công luồng CI/CD kết nối thẳng từ GitHub đến Amazon EKS, giúp mã nguồn tự động đóng gói thành image và cập nhật lên cụm container không thời gian chết (zero downtime).
+* **Quản trị dữ liệu & Phân tích:** Nắm vững quy trình đưa luồng dữ liệu thô vào Data Lake, xử lý qua các dịch vụ Analytics và xuất ra các biểu đồ (Dashboard) báo cáo kinh doanh trực quan thông qua Amazon QuickSight.
+* **AI/Machine Learning:** Tiếp cận nền tảng Amazon SageMaker, hiểu được vòng đời (Lifecycle) của một dự án học máy trên môi trường đám mây từ khâu chuẩn bị dữ liệu đến khi deploy model.

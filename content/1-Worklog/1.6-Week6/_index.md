@@ -1,57 +1,29 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-29
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master the process of migrating applications from a Monolithic architecture to Microservices.
+* Build and authenticate a Single Page Application (SPA).
+* Integrate AI services, orchestrate workflows with Step Functions, and automate application deployments (Auto-release apps).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mon** | **Monolith to Microservices:**<br>- Application Migrate Monolith.<br>- Create a Microservice. | 05/25/2026 | 05/25/2026 | AWS Lab Docs |
+| **Tue** | **Architecture & Eventing:**<br>- Data and workflow restructuring.<br>- Establish Microservices Messaging and Eventing. | 05/26/2026 | 05/26/2026 | AWS Lab Docs |
+| **Wed** | **Frontend & Authentication:**<br>- Create and authenticate Single Page Application. | 05/27/2026 | 05/27/2026 | AWS Lab Docs |
+| **Thu** | **AI & Workflows:**<br>- Experience AI services on AWS.<br>- Getting Started with AWS Step Functions. | 05/28/2026 | 05/28/2026 | AWS Lab Docs |
+| **Fri** | **CI/CD & Automation:**<br>- Configure pipeline to Auto-release apps. | 05/29/2026 | 05/29/2026 | AWS Lab Docs |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **App Modernization:** Understood the methodology to decompose a monolithic application into independent microservices. Successfully restructured data and workflows to enable seamless inter-service communication via Messaging and Eventing.
+* **Frontend & Integration:** Built an SPA equipped with secure user authentication. Explored and practically integrated out-of-the-box AWS AI services.
+* **Operations & Automation:** Mastered workflow orchestration using AWS Step Functions and successfully established CI/CD pipelines for automated software releases (Auto-release apps).

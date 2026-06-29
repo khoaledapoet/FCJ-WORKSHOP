@@ -1,57 +1,30 @@
 ---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-27
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Begin the Implementation phase for the Capstone Project: **Serverless Feedback Pipeline**.
+* Provision the NoSQL database and establish API communication endpoints.
+* Develop core processing logic and set up an automated notification system.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mon** | **Database Provisioning:**<br>- Provision Amazon DynamoDB tables to store user feedback.<br>- Configure Partition Keys and necessary Indexes. | 06/22/2026 | 06/22/2026 | AWS Docs |
+| **Tue** | **API Gateway Setup:**<br>- Set up Amazon API Gateway as the entry point for the system.<br>- Configure HTTP methods (POST/GET) to receive payload from the Frontend. | 06/23/2026 | 06/23/2026 | AWS Docs |
+| **Wed** | **Lambda Function Development:**<br>- Develop Backend code for AWS Lambda to process incoming feedback.<br>- Assign IAM roles granting Lambda permissions to write to DynamoDB. | 06/24/2026 | 06/24/2026 | AWS Docs |
+| **Thu** | **Integration & Testing:**<br>- Integrate API Gateway with the Lambda function (Lambda Proxy Integration).<br>- Perform API testing using Postman (API Gateway -> Lambda -> DynamoDB). | 06/25/2026 | 06/25/2026 | AWS Docs |
+| **Fri** | **Notification System:**<br>- Configure Amazon SNS to create notification Topics.<br>- Update Lambda code to trigger SNS and send emails upon new feedback submission. | 06/26/2026 | 06/26/2026 | AWS Docs |
+| **Sat** | **End-to-End Testing:**<br>- Conduct end-to-end testing of the entire data pipeline.<br>- Log bugs and optimize the backend source code. | 06/27/2026 | 06/27/2026 | AWS Docs |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Practical Infrastructure Deployment:** Successfully translated the architecture diagram into active AWS resources. Established seamless data flow from API Gateway to Lambda.
+* **Serverless Backend Processing:** Effectively wrote processing logic to handle payloads and securely store them in DynamoDB.
+* **Notification System:** Completed real-time email notification capabilities via SNS, ensuring administrators are alerted immediately when new user feedback is submitted, meeting core project requirements.
