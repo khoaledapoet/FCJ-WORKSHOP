@@ -1,57 +1,26 @@
 ---
-title: "Week 11 Worklog"
-date: 2024-01-01
-weight: 2
+title: "Week 11 Report"
+date: 2026-07-05
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 11 Objectives:
+* Deploy the Edge Layer to globally distribute the static web UI.
+* Completely mitigate CORS errors leveraging CDN Proxy architectures.
+* Erect Application Layer firewalls to actively defend against malicious payloads.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks Executed:
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Tasks Carried Out | Start Date | End Date | References |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mon** | **Static Hosting (S3):**<br>- Provisioned Amazon S3 Buckets hosting the PawVerse Frontend source code.<br>- Enforced absolute lockdown via the "Block all public access" configuration. | 06/29/2026 | 06/29/2026 | Amazon S3 Security Standards |
+| **Tue** | **CDN Distribution (CloudFront):**<br>- Provisioned a CloudFront Distribution to act as the global CDN network.<br>- Configured Origin Access Control (OAC) to cryptographically grant CloudFront read permissions over S3. | 06/30/2026 | 06/30/2026 | Amazon CloudFront CDN Setup |
+| **Wed** | **Intelligent Routing:**<br>- Injected the ALB as the 2nd Origin within CloudFront.<br>- Established Behaviors to split traffic: `/api/*` routed to ALB, default wildcard routed to S3. | 07/01/2026 | 07/01/2026 | CloudFront Dynamic Routing |
+| **Thu** | **Edge Security (WAF):**<br>- Activated the AWS WAF engine attached directly to the CloudFront distribution.<br>- Enforced AWS Managed Rules to automatically block malicious IP profiles. | 07/02/2026 | 07/02/2026 | AWS WAF Rule Groups |
+| **Fri** | **Database Protection:**<br>- Fine-tuned WAF rules, injecting SQL Injection shields to heavily fortify the internal RDS architecture. | 07/03/2026 | 07/03/2026 | OWASP Mitigation on AWS |
 
-
-### Week 11 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### Achievements:
+* **Page Load Optimization:** The Frontend UI is successfully cached across global CloudFront Edge Locations, minimizing network latency for end-users worldwide.
+* **Absolute Perimeter Security:** The architecture strictly prohibits direct client requests against S3 and EC2. The WAF engine operates as an active shield executing Deep Packet Inspection, dropping SQL Injection vectors aiming for the database.

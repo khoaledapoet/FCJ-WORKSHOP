@@ -1,57 +1,27 @@
 ---
-title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+title: "Week 12 Report"
+date: 2026-07-08
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 12 Objectives:
+* Finalize the Full-stack Observability pipeline for the PawVerse platform.
+* Establish automated Alarm triggers and audit trails.
+* Execute financial resource management (FinOps Cleanup) and wrap up documentation.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks Executed:
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Tasks Carried Out | Start Date | End Date | References |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mon** | **Metrics Monitoring:**<br>- Accessed CloudWatch and built a centralized Single Pane of Glass Dashboard.<br>- Streamed granular CPU data via CWAgent, Request Counts via ALB, and DB Connections via RDS. | 07/06/2026 | 07/06/2026 | Amazon CloudWatch Dashboards |
+| **Tue** | **Centralized Log Auditing:**<br>- Inspected Log Groups, remotely retrieving Spring Boot and Docker console traces without requiring direct EC2 SSH access. | 07/07/2026 | 07/07/2026 | CloudWatch Logs Management |
+| **Wed** | **System Alarms:**<br>- Configured CloudWatch Alarms to trigger when EC2 CPU loads breach 80%.<br>- Integrated Amazon SNS to dispatch automated critical Emails to Administrators. | 07/08/2026 | 07/08/2026 | Amazon SNS Notifications |
+| **Thu** | **Auditing & Fault Testing:**<br>- Activated CloudTrail to record infrastructure API actions (Audit Logs).<br>- Utilized AWS CloudShell (CLI) to force trigger the Red Alarm, validating the SNS Email pipeline. | 07/09/2026 | 07/09/2026 | AWS CloudTrail Compliance, AWS CLI |
+| **Fri** | **Cleanup & Reporting:**<br>- Executed FinOps Cleanup procedures: Systematically decommissioning resources from the Edge inward to the Core Network.<br>- Packaged the Hugo documentation repository and submitted the final internship report. | 07/10/2026 | 07/10/2026 | FinOps Best Practices |
 
-
-### Week 12 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### Achievements:
+* **Automated Telemetry:** The CloudWatch dashboard provides high-fidelity operational awareness regarding infrastructure health. The Incident Response pipeline functions flawlessly via SNS.
+* **Operational Transparency:** Every architectural modification is meticulously recorded by CloudTrail, satisfying strict Security and Compliance mandates.
+* **Cost Governance:** Mastered and executed resource cleanup protocols, ensuring zero unintended ongoing charges following the project deployment lifecycle.

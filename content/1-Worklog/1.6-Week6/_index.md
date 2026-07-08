@@ -1,29 +1,27 @@
 ---
-title: "Week 6 Worklog"
-date: 2026-05-29
+title: "Week 6 Report"
+date: 2026-05-31
 weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
 ### Week 6 Objectives:
+* Master the decoupling methodologies to transition Monolithic applications into Microservices architectures.
+* Build and secure user authentication flows for Single Page Applications (SPA).
+* Integrate AI services, orchestrate workflows via Step Functions, and configure Auto-release application pipelines.
 
-* Master the process of migrating applications from a Monolithic architecture to Microservices.
-* Build and authenticate a Single Page Application (SPA).
-* Integrate AI services, orchestrate workflows with Step Functions, and automate application deployments (Auto-release apps).
+### Tasks Executed:
 
-### Tasks to be carried out this week:
-
-| Day | Task | Start Date | Completion Date | Reference Material |
+| Day | Tasks Carried Out | Start Date | End Date | References |
 | :--- | :--- | :--- | :--- | :--- |
-| **Mon** | **Monolith to Microservices:**<br>- Application Migrate Monolith.<br>- Create a Microservice. | 05/25/2026 | 05/25/2026 | AWS Lab Docs |
-| **Tue** | **Architecture & Eventing:**<br>- Data and workflow restructuring.<br>- Establish Microservices Messaging and Eventing. | 05/26/2026 | 05/26/2026 | AWS Lab Docs |
-| **Wed** | **Frontend & Authentication:**<br>- Create and authenticate Single Page Application. | 05/27/2026 | 05/27/2026 | AWS Lab Docs |
-| **Thu** | **AI & Workflows:**<br>- Experience AI services on AWS.<br>- Getting Started with AWS Step Functions. | 05/28/2026 | 05/28/2026 | AWS Lab Docs |
-| **Fri** | **CI/CD & Automation:**<br>- Configure pipeline to Auto-release apps. | 05/29/2026 | 05/29/2026 | AWS Lab Docs |
+| **Mon** | **Monolith to Microservices:**<br>- Migrated Monolithic applications to independent Microservices. | 05/25/2026 | 05/25/2026 | [Ref 1](https://000050.awsstudygroup.com/)<br>[Ref 2](https://000052.awsstudygroup.com/) |
+| **Tue** | **Architecture & Eventing:**<br>- Restructured data topologies and execution workflows.<br>- Configured inter-service communication via Messaging and Eventing. | 05/26/2026 | 05/26/2026 | [Ref 1](https://000053.awsstudygroup.com/)<br>[Ref 2](https://000054.awsstudygroup.com/) |
+| **Wed** | **Frontend & Authentication:**<br>- Built and authenticated Single Page Applications. | 05/27/2026 | 05/27/2026 | [Ref](https://000055.awsstudygroup.com/) |
+| **Thu** | **AI & Workflows:**<br>- Experimented with and integrated native AWS AI services.<br>- Orchestrated automated workflows utilizing AWS Step Functions. | 05/28/2026 | 05/28/2026 | [Ref 1](https://000047.awsstudygroup.com/)<br>[Ref 2](https://000056.awsstudygroup.com/) |
+| **Fri** | **CI/CD & Automation:**<br>- Established Auto-release app pipelines for continuous delivery. | 05/29/2026 | 05/29/2026 | [Ref](https://000051.awsstudygroup.com/) |
 
-### Week 6 Achievements:
-
-* **App Modernization:** Understood the methodology to decompose a monolithic application into independent microservices. Successfully restructured data and workflows to enable seamless inter-service communication via Messaging and Eventing.
-* **Frontend & Integration:** Built an SPA equipped with secure user authentication. Explored and practically integrated out-of-the-box AWS AI services.
-* **Operations & Automation:** Mastered workflow orchestration using AWS Step Functions and successfully established CI/CD pipelines for automated software releases (Auto-release apps).
+### Achievements:
+* **Application Modernization:** Grasped the strategies to decouple Monoliths into autonomous Microservices. Successfully restructured data pipelines, allowing seamless service communications via Event-driven and Messaging protocols.
+* **Frontend & Integration:** Successfully developed SPAs integrated with robust user authentication frameworks. Explored and embedded native AWS AI capabilities into practical application workflows.
+* **Operations & Automation:** Understood state machine orchestration for complex workflows using AWS Step Functions and successfully engineered CI/CD pipelines to achieve fully automated software releases.

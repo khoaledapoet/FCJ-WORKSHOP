@@ -1,19 +1,32 @@
 ---
-title : "Giới thiệu"
-date : 2024-01-01 
+title : "Tổng quan Workshop"
+date : 2026-07-07
 weight : 1
 chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+#### Giới thiệu bài toán thực tế
+Hệ thống cũ của nền tảng thương mại điện tử thú cưng **PawVerse** thường xuyên đối mặt với rủi ro sập mạng mỗi khi chạy chương trình khuyến mãi (Flash Sale) do hạ tầng cố định, không chịu được tải cao và lưu trữ thông tin nhạy cảm trực tiếp trong mã nguồn. 
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+Workshop này sẽ hướng dẫn bạn từng bước (step-by-step) cách xây dựng một giải pháp điện toán đám mây phân tán, có khả năng tự động co giãn, bảo mật nhiều lớp và tối ưu chi phí trên AWS để giải quyết triệt để bài toán trên.
 
-#### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+#### Sơ đồ Kiến trúc (Architecture Diagram)
+Hệ thống PawVerse được thiết kế với kiến trúc 3-Tier (3 Tầng) trên nhiều vùng sẵn sàng (Multi-AZ), đảm bảo tính sẵn sàng cao (High Availability) và phân tách rõ ràng luồng dữ liệu.
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+![Sơ đồ kiến trúc PawVerse](/images/5-Workshop/5.1-Workshop-overview/diagram.png)
+*Hình 5.1: Sơ đồ luồng dữ liệu kiến trúc PawVerse trên AWS.*
+
+#### Giải thích các thành phần lõi
++ **Tầng Biên (Edge Layer):** AWS WAF và CloudFront bảo vệ chống tấn công DDoS, SQL Injection và tăng tốc phân phối giao diện tĩnh từ Amazon S3 (được khóa bảo mật bằng OAC).
++ **Tầng Xử lý (Compute Layer):** Application Load Balancer (ALB) phân phối tải động xuống cụm EC2. Auto Scaling Group tự động co giãn số lượng máy chủ dựa trên chỉ số CPU thực tế.
++ **Tầng Dữ liệu (Data Layer):** Amazon ElastiCache (Redis) làm bộ đệm giảm tải 80% truy vấn trực tiếp xuống cơ sở dữ liệu quan hệ Amazon RDS (MySQL).
++ **Tầng Bảo mật (Security Layer):** EC2 tự động lấy mật khẩu từ AWS Secrets Manager thông qua quyền IAM Role mà không cần hard-code vào source code.
+
+#### Lộ trình thực hành Step-by-Step
+Để hoàn thành hạ tầng này, chúng ta sẽ đi qua 5 bước chính trong Workshop:
+1. **Mạng lưới (VPC & Network):** Thiết lập Private/Public Subnets, NAT Gateway và VPC Endpoints.
+2. **Dữ liệu & Bảo mật (Database & Security):** Khởi tạo RDS, ElastiCache và két sắt Secrets Manager.
+3. **Xử lý tính toán (Compute & ALB):** Cấu hình EC2 Launch Template, Auto Scaling và Load Balancer.
+4. **Phân phối nội dung (Edge Layer):** Triển khai giao diện lên S3, kết nối CloudFront và WAF.
+5. **Dọn dẹp (Clean-up):** Tiêu hủy tài nguyên an toàn để tối ưu chi phí sau khi Lab kết thúc.

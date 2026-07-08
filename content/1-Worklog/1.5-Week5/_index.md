@@ -1,57 +1,29 @@
 ---
-title: "Week 5 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Week 5 Report"
+date: 2026-05-24
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
+* Deploy containerized workloads utilizing Docker and microservices architectures on Amazon Elastic Container Service (ECS).
+* Fully automate software release pipelines leveraging AWS CodePipeline.
+* Architect hybrid storage solutions (Storage Gateway), Data Lakes, FSx, and NoSQL structures via Amazon DynamoDB.
+* Execute advanced FinOps analysis using Athena, Glue, Right-sizing, and Savings Plans.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks Executed:
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Tasks Carried Out | Start Date | End Date | References |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mon** | **Containers & ECS:**<br>- Packaged applications inside Docker containers.<br>- Deployed workloads onto Amazon Elastic Container Service (ECS). | 05/18/2026 | 05/18/2026 | [Ref 1](https://000015.awsstudygroup.com/)<br>[Ref 2](https://000016.awsstudygroup.com/) |
+| **Tue** | **CI/CD & Automation:**<br>- Built continuous integration and delivery pipelines via AWS CodePipeline.<br>- Automated application deployment cycles. | 05/19/2026 | 05/19/2026 | [Ref 1](https://000017.awsstudygroup.com/)<br>[Ref 2](https://000024.awsstudygroup.com/) |
+| **Wed** | **Storage & Data Lake:**<br>- Provisioned infinite storage using File Storage Gateway.<br>- Deployed file systems for Windows environments using FSx.<br>- Engineered Data Lakes on the AWS ecosystem. | 05/20/2026 | 05/20/2026 | [Ref 1](https://000024.awsstudygroup.com/)<br>[Ref 2](https://000025.awsstudygroup.com/)<br>[Ref 3](https://000035.awsstudygroup.com/) |
+| **Thu** | **Database & Cost Optimization Basics:**<br>- Designed advanced data structures with Amazon DynamoDB.<br>- FinOps analysis: Selected optimal EC2 footprints (Right-sizing).<br>- Executed cost reductions via Savings Plans and Reserved Instances. | 05/21/2026 | 05/21/2026 | [Ref 1](https://000039.awsstudygroup.com/)<br>[Ref 2](https://000032.awsstudygroup.com/)<br>[Ref 3](https://000042.awsstudygroup.com/) |
+| **Fri** | **Advanced Cost Analytics:**<br>- Visualized system utilization and expenditure.<br>- Conducted big data cost analysis using AWS Glue and Amazon Athena. | 05/22/2026 | 05/22/2026 | [Ref 1](https://000034.awsstudygroup.com/)<br>[Ref 2](https://000040.awsstudygroup.com/) |
 
-
-### Week 5 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### Achievements:
+* **Container Architectures:** Decoupled applications from environments using Docker, successfully deploying large-scale microservices clusters on Amazon ECS.
+* **CI/CD Automation:** Established end-to-end AWS CodePipeline systems, automating the workflow from code pushes to software releases, heavily reducing manual operational errors.
+* **Data & Storage Governance:** Successfully implemented hybrid scalable storage using File Storage Gateway and FSx for Windows. Mastered centralized Data Lake construction and designed high-performance NoSQL schemas utilizing Amazon DynamoDB.
+* **FinOps Mastery:** Deeply understood long-term commitment models like Savings Plans to minimize corporate expenditures. Effectively leveraged AWS Glue for data ETL and queried granular Cost and Usage Reports (CUR) with Amazon Athena.  

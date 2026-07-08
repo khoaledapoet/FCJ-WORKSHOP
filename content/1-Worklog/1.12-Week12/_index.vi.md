@@ -1,58 +1,27 @@
 ---
-title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+title: "Báo cáo Tuần 12"
+date: 2026-07-08
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-### Mục tiêu tuần 12:
+### Mục tiêu Tuần 12:
+* Hoàn thiện khả năng quan sát (Observability) của hệ thống PawVerse.
+* Thiết lập báo động và truy vết tự động.
+* Thực hiện quy trình quản lý chi phí tài nguyên (FinOps Cleanup) và hoàn thiện báo cáo.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc đã thực hiện:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc đã làm | Ngày BĐ | Ngày HT | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| **Hai** | **Giám sát Chỉ số (Metrics):**<br>- Truy cập CloudWatch, xây dựng Dashboard tập trung.<br>- Lấy dữ liệu CPU chuyên sâu từ CWAgent, Request Count từ ALB và DB Connections từ RDS. | 06/07/2026 | 06/07/2026 | Amazon CloudWatch Dashboards |
+| **Ba** | **Truy xuất Log Tập trung:**<br>- Kiểm tra Log Groups, truy xuất log ứng dụng Spring Boot và Docker từ xa mà không cần SSH vào từng con máy ảo EC2. | 07/07/2026 | 07/07/2026 | CloudWatch Logs Management |
+| **Tư** | **Cảnh báo Hệ thống (Alarms):**<br>- Thiết lập Alarm cảnh báo khi CPU EC2 vượt ngưỡng 80%.<br>- Cấu hình Amazon SNS tự động gửi Email báo động khẩn cấp cho Quản trị viên. | 08/07/2026 | 08/07/2026 | Amazon SNS Notifications |
+| **Năm** | **Kiểm toán & Test Sự cố:**<br>- Kích hoạt CloudTrail ghi nhận nhật ký API (Audit Logs).<br>- Dùng AWS CloudShell (CLI) để ép Alarm báo động đỏ và xác thực luồng gửi Email SNS hoạt động hoàn hảo. | 09/07/2026 | 09/07/2026 | AWS CloudTrail Compliance, AWS CLI |
+| **Sáu** | **Dọn dẹp & Báo cáo:**<br>- Thực hiện quy trình FinOps Cleanup: Xóa tài nguyên theo chuẩn cấu trúc từ ngoài rìa (Edge) vào lõi (Network).<br>- Đóng gói mã nguồn tài liệu Hugo và nộp báo cáo thực tập tổng kết. | 10/07/2026 | 10/07/2026 | FinOps Best Practices |
 
-
-### Kết quả đạt được tuần 12:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### Kết quả đạt được:
+* **Hệ thống tự động báo cáo:** Bảng điều khiển CloudWatch cung cấp cái nhìn toàn cảnh về sức khỏe của hạ tầng. Chuỗi Incident Response (Phản hồi sự cố) hoạt động trơn tru qua SNS.
+* **Minh bạch hóa Vận hành:** Mọi thao tác đều được CloudTrail ghi lại, đáp ứng các tiêu chuẩn khắt khe về Security và Compliance.
+* **Kiểm soát chi phí:** Nắm vững và thực hành thành thạo kỹ năng dọn dẹp tài nguyên (Clean up), đảm bảo không phát sinh chi phí ngoài ý muốn sau khi kết thúc quá trình triển khai dự án.

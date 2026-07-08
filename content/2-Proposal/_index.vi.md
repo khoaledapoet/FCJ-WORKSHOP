@@ -1,65 +1,61 @@
 ---
-title: "Bản đề xuất"
-date: 2024-07-01
-weight: 2
-chapter: false
-pre: " <b> 2. </b> "
+title : "Đề xuất dự án "
+date : 2026-07-07
+weight : 2
+chapter : false
+pre : " <b> 2. </b> "
 ---
 
-# Hệ thống Go Flashsale cho Môi trường E-Commerce
-## Giải pháp AWS tự động co giãn và chịu tải cao cho sự kiện bán hàng chớp nhoáng
+#### 1. Tóm tắt dự án
+Dự án PawVerse được thiết kế nhằm giải quyết bài toán về hiệu suất mạng và bảo mật hạ tầng cho một nền tảng thương mại điện tử chuyên cung cấp sản phẩm thú cưng. Hệ thống được xây dựng với kiến trúc Multi-AZ trên AWS, kết hợp các quy chuẩn quản trị mạng chặt chẽ. Nền tảng ứng dụng Auto Scaling để tự động mở rộng cụm máy chủ EC2 khi lưu lượng truy cập tăng đột biến, tích hợp Amazon ElastiCache để tối ưu truy xuất thông tin sản phẩm và phân tách luồng dữ liệu bảo mật trong Private Subnet. PawVerse đảm bảo High Availability (Tính sẵn sàng cao), độ trễ thấp và tối ưu hóa chi phí vận hành.
 
-### 1. Tóm tắt điều hành
-Hệ thống Go Flashsale được thiết kế để giải quyết bài toán nghẽn cổ chai hạ tầng mạng và máy chủ trong các sự kiện thương mại điện tử có lượng truy cập tăng vọt (spike traffic). Nền tảng được xây dựng với Backend sử dụng ngôn ngữ Golang, kết hợp cùng kiến trúc Multi-AZ trên AWS. Hệ thống sử dụng cơ chế Auto Scaling để tự động mở rộng từ 2 lên hàng chục máy chủ EC2 khi tải tăng, Amazon ElastiCache để tối ưu truy xuất thông tin sản phẩm, và cơ sở dữ liệu Amazon RDS hoạt động theo cơ chế phân tách đọc/ghi. Nền tảng đảm bảo tính sẵn sàng cao (High Availability), độ trễ thấp và tối ưu chi phí vận hành.
+#### 2. Vấn đề hiện tại
+Các nền tảng e-commerce cơ bản thường triển khai hạ tầng tĩnh và lưu trữ mã nguồn chung với thông tin bảo mật (hard-code credentials). Khi có các đợt khuyến mãi, lượng truy cập tăng vọt gây cạn kiệt tài nguyên CPU/RAM và quá tải kết nối cơ sở dữ liệu. Đồng thời, việc thiếu vắng mạng phân phối nội dung (CDN) và tường lửa lớp ứng dụng khiến trang web tải chậm ở nhiều khu vực và dễ trở thành mục tiêu của các cuộc tấn công DDoS hoặc botnet, gây thiệt hại nghiêm trọng về doanh thu.
 
-### 2. Vấn đề hiện tại
-Các hệ thống thương mại điện tử truyền thống thường sử dụng hạ tầng tĩnh (cố định số lượng máy chủ). Khi diễn ra sự kiện Flash Sale, lượng truy cập và yêu cầu mua hàng tăng đột biến trong vài phút, dẫn đến tình trạng cạn kiệt tài nguyên CPU/RAM, quá tải kết nối cơ sở dữ liệu và sập hệ thống. Khách hàng không thể truy cập, gây thiệt hại nghiêm trọng về doanh thu và uy tín.
+#### 3. Giải pháp & Tỷ suất hoàn vốn
+**Giải pháp:** Nền tảng triển khai kiến trúc 3-Tier trên AWS VPC. Lưu lượng truy cập được phân phối bởi Application Load Balancer (ALB) đến Auto Scaling Group. Nội dung tĩnh được phân phối toàn cầu qua CloudFront, trong khi dữ liệu sản phẩm được lưu đệm tại Amazon ElastiCache (Redis) để giảm tải cơ sở dữ liệu. Amazon RDS đóng vai trò lưu trữ lõi. Đặc biệt, AWS WAF và Secrets Manager được tích hợp sâu để chặn luồng truy cập độc hại và quản lý hoàn toàn tự động các chuỗi kết nối (connection strings).
+**ROI:** Giải pháp mang lại mô hình chi phí Pay-as-you-go đích thực: chỉ trả tiền cho tài nguyên sinh thêm vào thời điểm tải cao. Việc tự động hóa giám sát và ẩn giấu thông tin bảo mật giúp giảm thiểu tối đa rủi ro vận hành, đáp ứng hoàn hảo các tiêu chuẩn khắt khe nhất của môi trường Enterprise Cloud Operations.
 
-### 3. Giải pháp & Hoàn vốn đầu tư (ROI)
-*   **Giải pháp:** Nền tảng triển khai kiến trúc 3 lớp (3-Tier) trên AWS VPC. Giao thông mạng được phân phối bởi Application Load Balancer (ALB) đến nhóm Auto Scaling Group. Dữ liệu tĩnh và thông tin sản phẩm được đưa vào Amazon ElastiCache (Redis) để giảm tải cho cơ sở dữ liệu. Amazon RDS được thiết lập cấu hình Primary và Read Replica để tách biệt luồng ghi đơn hàng và luồng đọc sản phẩm. WAF và Secrets Manager được tích hợp để chống tấn công bằng bot và bảo mật thông tin.
-*   **ROI:** Giải pháp mang lại mô hình chi phí Pay-as-you-go thực sự: doanh nghiệp chỉ trả tiền cho phần tài nguyên mở rộng trong đúng 1-2 giờ diễn ra Flash Sale. Tự động hóa hoàn toàn quy trình mở rộng giúp giảm tải công việc giám sát thủ công, đáp ứng hoàn hảo các tiêu chuẩn của môi trường Cloud Operation.
+#### 4. Solution Architecture (Kiến trúc giải pháp)
+Hệ thống áp dụng kiến trúc phân tán Multi-AZ. Yêu cầu của người dùng trước tiên được kiểm duyệt qua WAF và tăng tốc bởi CloudFront. Các luồng gọi API đi qua Internet Gateway để vào Virtual Private Cloud (VPC), sau đó được ALB điều hướng. Năng lực xử lý (Compute) tự động mở rộng dựa trên các chỉ số giám sát từ CloudWatch. Toàn bộ máy chủ và dữ liệu lõi được bảo vệ nghiêm ngặt bên trong Private Subnet, giao tiếp nội bộ qua VPC Endpoint và kết nối ra ngoài qua NAT Gateway.
 
-### 4. Kiến trúc giải pháp
-Nền tảng áp dụng kiến trúc phân tán đa vùng (Multi-AZ) để quản lý luồng dữ liệu lớn. Yêu cầu của người dùng được kiểm duyệt qua WAF trước khi vào mạng riêng ảo (VPC). Khả năng tính toán được tự động mở rộng theo metric giám sát CPU. Dữ liệu được bảo vệ nghiêm ngặt ở các mạng nội bộ (Private Subnets).
+![diagram](/images/2-Proposal/diagram.png)
 
-![Flash Sale Architecture](/images/2-Proposal/flashsale_architecture.jpeg)
+#### 5. Các dịch vụ AWS sử dụng
++ **Amazon EC2 & Auto Scaling:** Xử lý logic ứng dụng và tự động co giãn.
++ **Application Load Balancer (ALB):** Phân phối lưu lượng truy cập động.
++ **Amazon RDS:** Quản lý cơ sở dữ liệu quan hệ lõi.
++ **Amazon ElastiCache:** Lưu trữ bộ đệm dữ liệu sản phẩm.
++ **AWS WAF & CloudFront:** Phân phối nội dung toàn cầu và chặn tấn công.
++ **Amazon S3:** Lưu trữ tĩnh mã nguồn giao diện (Frontend).
++ **AWS Secrets Manager & KMS:** Quản lý và mã hóa mật khẩu tự động.
++ **Amazon CloudWatch, CloudTrail & SNS:** Giám sát, kiểm toán và cảnh báo hệ thống.
++ **VPC, NAT & Internet Gateway:** Quản trị phân luồng mạng và Subnet.
 
-### 5. Dịch vụ AWS sử dụng
-*   **Amazon EC2 & Auto Scaling:** Xử lý logic nghiệp vụ bằng Golang.
-*   **Application Load Balancer (ALB):** Điều phối luồng truy cập.
-*   **Amazon RDS:** Quản lý giao dịch, chia luồng Đọc/Ghi.
-*   **Amazon ElastiCache:** Lưu cache dữ liệu sản phẩm.
-*   **AWS WAF & CloudFront:** Phân phối nội dung và chặn Bot.
-*   **AWS Secrets Manager:** Quản lý chuỗi kết nối.
-*   **Amazon CloudWatch & SNS:** Giám sát và cảnh báo.
-*   **NAT & Internet Gateway:** Quản lý định tuyến VPC.
+#### 6. Triển khai kỹ thuật
+Dự án được chia làm 4 giai đoạn chính:
++ **Network & Security Design:** Cấu hình VPC, phân vùng Public/Private Subnets, thiết lập Security Groups và VPC Endpoint.
++ **DB & Caching Deployment:** Khởi tạo Amazon RDS, ElastiCache và thiết lập két sắt AWS Secrets Manager.
++ **Compute & Load Balancing Config:** Thiết lập EC2 Launch Template (tích hợp User Data tự động hóa giải mã Secrets), cấu hình ALB và Auto Scaling.
++ **Edge Layer & Monitoring:** Triển khai S3, CloudFront (kèm OAC), kích hoạt WAF, thiết lập giám sát CloudWatch và cảnh báo SNS.
 
-### 6. Triển khai kỹ thuật
-Dự án được chia thành 4 giai đoạn chính:
-1.  **Thiết kế mạng & Bảo mật:** Cấu hình VPC, chia Public/Private Subnets, thiết lập Security Groups (Tuần 1-3).
-2.  **Triển khai CSDL & Caching:** Triển khai RDS, ElastiCache, thiết lập Secrets Manager (Tuần 4-6).
-3.  **Cấu hình Compute & Load Balancing:** Đưa mã nguồn lên EC2, thiết lập ALB và Auto Scaling Group (Tuần 7-9).
-4.  **Kiểm thử & Tự động hóa:** Bắn request giả lập Flash Sale, cấu hình CloudWatch (Tuần 10-12).
+#### 7. Lộ trình & Cột mốc
++ **Tháng 1:** Phân tích yêu cầu, thiết kế sơ đồ kiến trúc tổng thể và triển khai mạng lưới VPC cốt lõi.
++ **Tháng 2:** Khởi tạo tầng cơ sở dữ liệu, bộ đệm bảo mật và triển khai cụm EC2 cùng bộ cân bằng tải ALB.
++ **Tháng 3:** Cấu hình CDN toàn cầu (CloudFront), tường lửa WAF và thiết lập hệ thống Auto Scaling.
++ **Tháng 4:** Kiểm thử sức chịu tải (Load Testing), kiểm toán bảo mật và viết báo cáo nghiệm thu kỹ thuật.
 
-**Yêu cầu kỹ thuật:** Hiểu biết về Subnetting (CIDR), tự động hóa EC2 bằng User Data, và sử dụng công cụ load-test (tối thiểu 5000 requests/second).
+#### 8. Ước tính ngân sách
+Quá trình thực hành tối đa hóa việc sử dụng tài nguyên AWS Free Tier. Chi phí ước tính cho các dịch vụ ngoài Free Tier:
++ **NAT Gateway:** ~0.045 USD/giờ.
++ **Application Load Balancer:** ~0.0225 USD/giờ.
++ **AWS WAF:** ~5.00 USD/tháng.
++ **AWS Secrets Manager:** ~0.40 USD/secret/tháng.
+**Tổng ngân sách Lab:** Khoảng 10 - 15 USD (Được kiểm soát nghiêm ngặt bằng việc xóa tài nguyên lập tức sau khi Demo và Testing).
 
-### 7. Lộ trình & Mốc triển khai
-*   **Tháng 0:** Phân tích mã nguồn Golang, thiết kế sơ đồ kiến trúc.
-*   **Tháng 1:** Triển khai khung mạng VPC, cấu hình WAF và Database.
-*   **Tháng 2:** Tích hợp ElastiCache, triển khai EC2 và ALB.
-*   **Tháng 3:** Cấu hình Auto Scaling, Load Testing và viết báo cáo.
+#### 9. Đánh giá rủi ro
++ **Rủi ro:** Lỗ hổng giao tiếp mạng khiến các thành phần không thể kết nối (Cao); Vượt quá ngân sách do Auto Scaling tự động mở rộng ngoài tầm kiểm soát (Trung bình).
++ **Khắc phục:** Áp dụng nguyên tắc Đặc quyền tối thiểu (Least Privilege) cho IAM Role và Security Groups. Chặn toàn bộ cổng SSH (22) từ bên ngoài. Thiết lập giới hạn cứng (Max capacity) cho Auto Scaling Group và cài đặt AWS Billing Alarm qua Email.
 
-### 8. Ước tính ngân sách
-Quá trình thực hành chủ yếu tận dụng AWS Free Tier (EC2 t2.micro, RDS t3.micro). Chi phí ngoài Free Tier dự kiến:
-*   **NAT Gateway:** ~0,045 USD/giờ.
-*   **ALB:** ~0,0225 USD/giờ.
-*   **AWS WAF:** ~5,00 USD/tháng.
-*   **AWS Secrets Manager:** 0,40 USD/secret/tháng.
-*   **Tổng ngân sách Lab:** Khoảng 15 USD - 20 USD/tháng (kiểm soát chặt chẽ bằng cách xóa tài nguyên sau khi Load Test).
-
-### 9. Đánh giá rủi ro
-*   **Rủi ro:** Lộ lọt dữ liệu bảo mật (Xác suất thấp nhờ Secrets Manager). Quá ngân sách do Auto Scaling (Xác suất cao nếu quên giới hạn Max).
-*   **Giảm thiểu:** Áp dụng nguyên tắc quyền hạn tối thiểu. Đóng cổng SSH (22). Cài đặt giới hạn cứng (Max instance = 5) cho Auto Scaling. Thiết lập AWS Billing Alarm.
-
-### 10. Kết quả kỳ vọng
-Hệ thống phản hồi hàng ngàn yêu cầu đồng thời mà không bị treo. Xử lý triệt để bài toán thắt cổ chai nhờ việc tách luồng Đọc/Ghi cơ sở dữ liệu và lưu Cache. Xây dựng một Use-case thực tế có giá trị cao, thể hiện rõ tư duy thiết kế hệ thống và năng lực vận hành Cloud.
+#### 10. Kết quả mong đợi
+Hệ thống xử lý mượt mà hàng ngàn yêu cầu đồng thời mà không bị sập. Khắc phục triệt để rào cản bảo mật bằng cách không hard-code bất kỳ mật khẩu nào vào mã nguồn. Trình bày được một Use-case thực tiễn có giá trị cao, thể hiện rõ tư duy thiết kế hệ thống, quản trị mạng lưới và khả năng vận hành Cloud chuyên nghiệp.

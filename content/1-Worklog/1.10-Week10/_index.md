@@ -1,30 +1,26 @@
 ---
-title: "Week 10 Worklog"
-date: 2026-06-27
+title: "Week 10 Report"
+date: 2026-06-28
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
 ### Week 10 Objectives:
+* Configure the Compute Layer for the PawVerse project.
+* Automate the internal software bootstrap and installation sequences.
+* Establish traffic orchestration mechanisms and elastic auto-scaling infrastructure.
 
-* Begin the Implementation phase for the Capstone Project: **Serverless Feedback Pipeline**.
-* Provision the NoSQL database and establish API communication endpoints.
-* Develop core processing logic and set up an automated notification system.
+### Tasks Executed:
 
-### Tasks to be carried out this week:
-
-| Day | Task | Start Date | Completion Date | Reference Material |
+| Day | Tasks Carried Out | Start Date | End Date | References |
 | :--- | :--- | :--- | :--- | :--- |
-| **Mon** | **Database Provisioning:**<br>- Provision Amazon DynamoDB tables to store user feedback.<br>- Configure Partition Keys and necessary Indexes. | 06/22/2026 | 06/22/2026 | AWS Docs |
-| **Tue** | **API Gateway Setup:**<br>- Set up Amazon API Gateway as the entry point for the system.<br>- Configure HTTP methods (POST/GET) to receive payload from the Frontend. | 06/23/2026 | 06/23/2026 | AWS Docs |
-| **Wed** | **Lambda Function Development:**<br>- Develop Backend code for AWS Lambda to process incoming feedback.<br>- Assign IAM roles granting Lambda permissions to write to DynamoDB. | 06/24/2026 | 06/24/2026 | AWS Docs |
-| **Thu** | **Integration & Testing:**<br>- Integrate API Gateway with the Lambda function (Lambda Proxy Integration).<br>- Perform API testing using Postman (API Gateway -> Lambda -> DynamoDB). | 06/25/2026 | 06/25/2026 | AWS Docs |
-| **Fri** | **Notification System:**<br>- Configure Amazon SNS to create notification Topics.<br>- Update Lambda code to trigger SNS and send emails upon new feedback submission. | 06/26/2026 | 06/26/2026 | AWS Docs |
-| **Sat** | **End-to-End Testing:**<br>- Conduct end-to-end testing of the entire data pipeline.<br>- Log bugs and optimize the backend source code. | 06/27/2026 | 06/27/2026 | AWS Docs |
+| **Mon** | **IAM Permissions:**<br>- Generated IAM Roles allowing EC2 instances to retrieve Secrets Manager payloads and push Logs to CloudWatch. | 06/22/2026 | 06/22/2026 | AWS IAM Documentation |
+| **Tue** | **Server Standardization (Launch Template):**<br>- Designed Launch Templates utilizing Amazon Linux 2023 AMIs.<br>- Coded Bash Scripts (User Data) to automate Docker installation, source code retrieval, and CWAgent configuration. | 06/23/2026 | 06/23/2026 | EC2 Launch Templates Guide |
+| **Wed** | **Internal Routing:**<br>- Provisioned Target Groups to execute Health Checks against internal Spring Boot backend servers. | 06/24/2026 | 06/24/2026 | Elastic Load Balancing Docs |
+| **Thu** | **Load Balancing (ALB):**<br>- Deployed an Application Load Balancer (ALB) to ingest external perimeter traffic.<br>- Bound the ALB to the Target Group to distribute inbound request flows. | 06/25/2026 | 06/25/2026 | ALB Routing Mechanisms |
+| **Fri** | **Elastic Scaling (Auto Scaling):**<br>- Deployed an Auto Scaling Group attached to the ALB.<br>- Validated the system's capability to dynamically provision 2 Healthy instances and cross-connect successfully. | 06/26/2026 | 06/26/2026 | Amazon EC2 Auto Scaling |
 
-### Week 10 Achievements:
-
-* **Practical Infrastructure Deployment:** Successfully translated the architecture diagram into active AWS resources. Established seamless data flow from API Gateway to Lambda.
-* **Serverless Backend Processing:** Effectively wrote processing logic to handle payloads and securely store them in DynamoDB.
-* **Notification System:** Completed real-time email notification capabilities via SNS, ensuring administrators are alerted immediately when new user feedback is submitted, meeting core project requirements.
+### Achievements:
+* **Bootstrap Automation:** Successfully applied User Data scripts, granting newly spawned EC2 instances the capability to automatically fetch source code, decrypt secrets, and spin up Docker containers without manual intervention.
+* **High Availability (HA) Guarantee:** The ALB network flow evenly distributed payloads across EC2 nodes. The Auto Scaling Group ensured the PawVerse platform maintained absolute stability even during volatile traffic spikes.

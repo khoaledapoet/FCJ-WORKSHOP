@@ -1,18 +1,32 @@
 ---
-title : "Introduction"
-date : 2024-01-01 
-weight : 1 
+title : "Workshop Overview"
+date : 2026-07-07
+weight : 1
 chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+#### Real-world Business Problem
+The legacy system of the **PawVerse** pet e-commerce platform frequently faced severe network downtime during promotional events (Flash Sales) due to rigid infrastructure, poor load capacity, and hard-coded sensitive credentials.
 
-#### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
+This workshop will guide you step-by-step on how to build a distributed, auto-scaling, multi-layer secure, and cost-optimized cloud solution on AWS to thoroughly resolve the aforementioned issues.
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+#### Architecture Diagram
+The PawVerse system is designed with a 3-Tier architecture across multiple Availability Zones (Multi-AZ), ensuring High Availability and clear separation of data flows.
+
+![PawVerse Architecture Diagram](/images/5-Workshop/5.1-Workshop-overview/diagram.png)
+*Figure 5.1: PawVerse AWS cloud infrastructure data flow diagram.*
+
+#### Core Components Explanation
++ **Edge Layer:** AWS WAF and CloudFront protect against DDoS and SQL Injection attacks while accelerating the delivery of static interfaces from Amazon S3 (secured by OAC).
++ **Compute Layer:** The Application Load Balancer (ALB) distributes dynamic traffic to the EC2 cluster. The Auto Scaling Group dynamically adjusts the number of servers based on real-time CPU metrics.
++ **Data Layer:** Amazon ElastiCache (Redis) acts as an in-memory buffer, offloading 80% of direct queries to the Amazon RDS (MySQL) relational database.
++ **Security Layer:** EC2 instances automatically retrieve database passwords from AWS Secrets Manager via IAM Roles, completely eliminating hard-coded credentials.
+
+#### Step-by-Step Workshop Roadmap
+To complete this infrastructure, we will walk through 5 main phases in the Workshop:
+1. **VPC & Network:** Establish Private/Public Subnets, NAT Gateways, and VPC Endpoints.
+2. **Database & Security:** Provision RDS, ElastiCache, and Secrets Manager vaults.
+3. **Compute & ALB:** Configure EC2 Launch Templates, Auto Scaling, and Load Balancers.
+4. **Edge Layer:** Deploy the frontend to S3, and connect CloudFront along with WAF.
+5. **Clean-up:** Safely terminate resources to optimize costs after the Lab concludes.

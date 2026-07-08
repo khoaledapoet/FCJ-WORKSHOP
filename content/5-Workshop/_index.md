@@ -1,31 +1,35 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-07-07
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# PawVerse Cloud Infrastructure Deployment
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+In the modern e-commerce landscape, maintaining a resilient, highly scalable system that strictly protects user data is vital for any enterprise.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+In this Workshop, you will gain hands-on experience blueprinting, configuring, and deploying the entire AWS cloud infrastructure for the **PawVerse** platform. The system utilizes a distributed Multi-tier architecture, seamlessly integrating a global content delivery network, web application firewalls, caching clusters, and dynamic auto-scaling mechanisms.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+Specifically, this lab emphasizes Cloud Operations thinking and core security by rigorously enforcing the Principle of Least Privilege, completely isolating resources within Private Subnets, and automating the encryption of sensitive credentials.
 
-#### Content
+#### Core Services Utilized
++ **Networking & Security:** Amazon VPC, NAT/IGW Gateway, S3 Gateway Endpoint, AWS IAM, AWS KMS, AWS Secrets Manager.
++ **Compute & Scaling:** Amazon EC2, EC2 Launch Templates, Auto Scaling Group, Application Load Balancer (ALB).
++ **Storage & Database:** Amazon RDS (MySQL), Amazon ElastiCache (Redis), Amazon S3.
++ **Edge Delivery & Protection:** Amazon CloudFront, AWS WAF.
++ **Observability & Management:** Amazon CloudWatch, AWS CloudTrail, Amazon SNS.
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+#### Workshop Content
+
+1. **[Workshop Overview](5.1-Workshop-overview/):** Understand the real-world business problem and analyze the Solution Architecture Diagram.
+2. **[Prerequisites](5.2-Prerequiste/):** Prepare the AWS environment, IAM Roles, deployment region, and source code.
+3. **[VPC & Network Infrastructure](5.3-vpc-network/):** Build the core internal network framework, configure Public/Private routing, and optimize bandwidth using Gateway Endpoints.
+4. **[Storage & Credentials Security](5.4-Database-Security/):** Deploy Secrets Manager vaults, Amazon RDS, ElastiCache, and audit network isolation (DNS Simulation).
+5. **[Compute & Load Balancing](5.5-Compute-ALB/):** Write automated bootstrap scripts (User Data), setup the ALB, and configure the Auto Scaling Group.
+6. **[Edge Layer (CloudFront & WAF)](5.6-EdgeLayer/):** Host Frontend on S3, configure global CDN distribution, and set up the web application firewall.
+7. **[Monitoring & Alarms](5.7-Monitoring/):** Configure the CloudWatch Agent to collect logs/metrics, set up proactive SNS alarms, and audit system API activities via CloudTrail.
+8. **[Resource Cleanup](5.8-Cleanup/):** Safely decommission the infrastructure in the correct FinOps sequence to eliminate unintended ongoing charges.
