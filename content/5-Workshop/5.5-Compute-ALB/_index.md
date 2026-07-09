@@ -15,3 +15,4 @@ In this chapter, we will sequentially execute 4 practical deployment steps:
 1. **Provision Launch Template:** Define the standardized hardware blueprint and write automated bootstrap scripts (User Data).
 2. **Setup Application Load Balancer:** Configure a load balancer within the Public Subnets to distribute incoming internet traffic.
 3. **Configure Auto Scaling Group:** Establish a dynamically scaling server cluster isolated deep within the Private Subnets.
+4. **Testing High Availability (HA & Auto Scaling Test):** Actively simulating a CPU resource exhaustion event (CPU Stress) to validate the automated scaling and self-healing capabilities of the entire infrastructure.

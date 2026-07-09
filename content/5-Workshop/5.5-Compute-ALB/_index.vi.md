@@ -15,3 +15,4 @@ Trong chương này, chúng ta sẽ lần lượt thực hiện 4 bước triể
 1. **Khởi tạo Launch Template:** Định nghĩa cấu hình phần cứng mẫu và viết kịch bản tự động hóa khởi tạo máy chủ (User Data).
 2. **Thiết lập Application Load Balancer:** Cấu hình bộ cân bằng tải đặt tại Public Subnet để điều phối lưu lượng truy cập từ Internet.
 3. **Cấu hình Auto Scaling Group:** Thiết lập cụm máy chủ co giãn linh hoạt đặt ẩn sâu trong Private Subnet.
+3. **Kiểm thử Tính sẵn sàng cao (HA & Auto Scaling Test):** Trực tiếp giả lập một cuộc tấn công vắt kiệt tài nguyên (CPU Stress) để nghiệm thu khả năng tự động co giãn và phục hồi của toàn bộ hệ thống.
