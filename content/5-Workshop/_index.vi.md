@@ -31,5 +31,6 @@ Trong bài Lab này, bạn sẽ tự tay thực hành thiết kế, cấu hình 
 4. **[Lưu trữ & Bảo mật Credentials](5.4-Database-Security/):** Triển khai két sắt Secrets Manager, Amazon RDS, ElastiCache và kiểm toán tính cô lập mạng (DNS Simulation).
 5. **[Máy chủ & Cân bằng tải](5.5-Compute-ALB/):** Viết kịch bản tự động hóa khởi động (User Data), thiết lập ALB và cấu hình Auto Scaling Group.
 6. **[Tầng Biên (CloudFront & WAF)](5.6-EdgeLayer/):** Đưa giao diện Frontend lên S3, phân phối CDN toàn cầu và thiết lập tường lửa web.
-7. **[Giám sát & Cảnh báo](5.7-Monitoring/):** Cấu hình đặc vụ CloudWatch Agent thu thập logs/metrics, thiết lập chuông cảnh báo SNS và truy vết kiểm toán hệ thống bằng CloudTrail.
-8. **[Dọn dẹp tài nguyên](5.8-Cleanup/):** Phá hủy hạ tầng an toàn theo đúng trình tự FinOps để triệt tiêu chi phí phát sinh ngoài ý muốn.
+7. **[Giám sát & Cảnh báo](5.7-Monitoring/):** Cấu hình đặc vụ CloudWatch Agent thu thập dữ liệu, thiết lập cảnh báo SNS và truy vết hệ thống bằng CloudTrail.
+8. **[Live Demo & Đúc kết kinh nghiệm](5.8-Reflection/):** Chiêm ngưỡng hệ thống thực tế và rút ra các bài học kỹ thuật quan trọng trong vận hành.
+9. **[Dọn dẹp tài nguyên](5.9-Cleanup/):** Phá hủy hạ tầng an toàn theo đúng trình tự FinOps để triệt tiêu chi phí phát sinh ngoài ý muốn.

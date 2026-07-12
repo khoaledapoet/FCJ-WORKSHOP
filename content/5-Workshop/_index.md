@@ -31,5 +31,6 @@ Specifically, this lab emphasizes Cloud Operations thinking and core security by
 4. **[Storage & Credentials Security](5.4-Database-Security/):** Deploy Secrets Manager vaults, Amazon RDS, ElastiCache, and audit network isolation (DNS Simulation).
 5. **[Compute & Load Balancing](5.5-Compute-ALB/):** Write automated bootstrap scripts (User Data), setup the ALB, and configure the Auto Scaling Group.
 6. **[Edge Layer (CloudFront & WAF)](5.6-EdgeLayer/):** Host Frontend on S3, configure global CDN distribution, and set up the web application firewall.
-7. **[Monitoring & Alarms](5.7-Monitoring/):** Configure the CloudWatch Agent to collect logs/metrics, set up proactive SNS alarms, and audit system API activities via CloudTrail.
-8. **[Resource Cleanup](5.8-Cleanup/):** Safely decommission the infrastructure in the correct FinOps sequence to eliminate unintended ongoing charges.
+7. **[Monitoring & Alerting](5.7-Monitoring/):** Configure the CloudWatch Agent for metrics collection, set up SNS alerts, and enable system auditing via CloudTrail.
+8. **[Live Demo & Reflection](5.8-Reflection/):** Admire the real-world system and extract critical technical lessons learned during operations.
+9. **[Resource Cleanup](5.9-Cleanup/):** Safely decommission the infrastructure following FinOps procedures to eliminate unintended costs.
