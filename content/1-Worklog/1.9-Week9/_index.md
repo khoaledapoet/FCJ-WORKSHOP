@@ -15,11 +15,11 @@ pre: " <b> 1.9. </b> "
 
 | Day | Tasks Carried Out | Start Date | End Date | References |
 | :--- | :--- | :--- | :--- | :--- |
-| **Mon** | **Architecture Analysis:**<br>- Received PawVerse project requirements from Mentors.<br>- Designed the 5-tier infrastructure logical architecture blueprint. | 06/15/2026 | 06/15/2026 | PawVerse System Architecture Docs |
-| **Tue** | **Core Networking (VPC):**<br>- Provisioned PawVerse-VPC with standardized CIDR blocks.<br>- Allocated Public and Private Subnets across 2 Availability Zones. | 06/16/2026 | 06/16/2026 | AWS VPC Documentation |
-| **Wed** | **Network Routing & Gateways:**<br>- Attached Internet Gateways to Public Subnets.<br>- Deployed NAT Gateways to grant internet access for Private Subnets.<br>- Configured S3 Gateway Endpoints for bandwidth optimization. | 06/17/2026 | 06/17/2026 | AWS VPC Routing Guide |
-| **Thu** | **Firewalls & Secrets Management:**<br>- Defined Security Group perimeters for both Web and Database Tiers.<br>- Initialized AWS Secrets Manager to securely vault DB passwords. | 06/18/2026 | 06/18/2026 | AWS Security Groups, Secrets Manager |
-| **Fri** | **Database Deployment:**<br>- Configured Amazon RDS MySQL inside the Private Subnet.<br>- Provisioned ElastiCache Redis clusters for high-speed caching. | 06/19/2026 | 06/19/2026 | Amazon RDS & ElastiCache Docs |
+| **Mon** | **Architecture Analysis:**<br>- Received PawVerse project requirements from Mentors.<br>- Designed the 5-tier infrastructure logical architecture blueprint. | 06/15/2026 | 06/15/2026 |  |
+| **Tue** | **Core Networking (VPC):**<br>- Provisioned PawVerse-VPC with standardized CIDR blocks.<br>- Allocated Public and Private Subnets across 2 Availability Zones. | 06/16/2026 | 06/16/2026 |  |
+| **Wed** | **Network Routing & Gateways:**<br>- Attached Internet Gateways to Public Subnets.<br>- Deployed NAT Gateways to grant internet access for Private Subnets.<br>- Configured S3 Gateway Endpoints for bandwidth optimization. | 06/17/2026 | 06/17/2026 |  |
+| **Thu** | **Firewalls & Secrets Management:**<br>- Defined Security Group perimeters for both Web and Database Tiers.<br>- Initialized AWS Secrets Manager to securely vault DB passwords. | 06/18/2026 | 06/18/2026 | AWS  |
+| **Fri** | **Database Deployment:**<br>- Configured Amazon RDS MySQL inside the Private Subnet.<br>- Provisioned ElastiCache Redis clusters for high-speed caching. | 06/19/2026 | 06/19/2026 |  |
 
 ### Achievements:
 * **Robust Network Infrastructure:** Successfully deployed a VPC strictly adhering to AWS Best Practices, fully isolating internal/external environments while guaranteeing Multi-AZ redundancy.

@@ -15,11 +15,11 @@ pre: " <b> 1.10. </b> "
 
 | Day | Tasks Carried Out | Start Date | End Date | References |
 | :--- | :--- | :--- | :--- | :--- |
-| **Mon** | **IAM Permissions:**<br>- Generated IAM Roles allowing EC2 instances to retrieve Secrets Manager payloads and push Logs to CloudWatch. | 06/22/2026 | 06/22/2026 | AWS IAM Documentation |
-| **Tue** | **Server Standardization (Launch Template):**<br>- Designed Launch Templates utilizing Amazon Linux 2023 AMIs.<br>- Coded Bash Scripts (User Data) to automate Docker installation, source code retrieval, and CWAgent configuration. | 06/23/2026 | 06/23/2026 | EC2 Launch Templates Guide |
-| **Wed** | **Internal Routing:**<br>- Provisioned Target Groups to execute Health Checks against internal Spring Boot backend servers. | 06/24/2026 | 06/24/2026 | Elastic Load Balancing Docs |
-| **Thu** | **Load Balancing (ALB):**<br>- Deployed an Application Load Balancer (ALB) to ingest external perimeter traffic.<br>- Bound the ALB to the Target Group to distribute inbound request flows. | 06/25/2026 | 06/25/2026 | ALB Routing Mechanisms |
-| **Fri** | **Elastic Scaling (Auto Scaling):**<br>- Deployed an Auto Scaling Group attached to the ALB.<br>- Validated the system's capability to dynamically provision 2 Healthy instances and cross-connect successfully. | 06/26/2026 | 06/26/2026 | Amazon EC2 Auto Scaling |
+| **Mon** | **IAM Permissions:**<br>- Generated IAM Roles allowing EC2 instances to retrieve Secrets Manager payloads and push Logs to CloudWatch. | 06/22/2026 | 06/22/2026 |  |
+| **Tue** | **Server Standardization (Launch Template):**<br>- Designed Launch Templates utilizing Amazon Linux 2023 AMIs.<br>- Coded Bash Scripts (User Data) to automate Docker installation, source code retrieval, and CWAgent configuration. | 06/23/2026 | 06/23/2026 | |
+| **Wed** | **Internal Routing:**<br>- Provisioned Target Groups to execute Health Checks against internal Spring Boot backend servers. | 06/24/2026 | 06/24/2026 |  |
+| **Thu** | **Load Balancing (ALB):**<br>- Deployed an Application Load Balancer (ALB) to ingest external perimeter traffic.<br>- Bound the ALB to the Target Group to distribute inbound request flows. | 06/25/2026 | 06/25/2026 |  |
+| **Fri** | **Elastic Scaling (Auto Scaling):**<br>- Deployed an Auto Scaling Group attached to the ALB.<br>- Validated the system's capability to dynamically provision 2 Healthy instances and cross-connect successfully. | 06/26/2026 | 06/26/2026 |  |
 
 ### Achievements:
 * **Bootstrap Automation:** Successfully applied User Data scripts, granting newly spawned EC2 instances the capability to automatically fetch source code, decrypt secrets, and spin up Docker containers without manual intervention.

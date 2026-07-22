@@ -15,11 +15,11 @@ pre: " <b> 1.11. </b> "
 
 | Thứ | Công việc đã làm | Ngày BĐ | Ngày HT | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Hai** | **Lưu trữ tĩnh (S3 Hosting):**<br>- Cấu hình Amazon S3 Bucket chứa mã nguồn Frontend PawVerse.<br>- Khóa chặt toàn bộ truy cập công cộng (Block all public access). | 29/06/2026 | 29/06/2026 | Amazon S3 Security Standards |
-| **Ba** | **Phân phối CDN (CloudFront):**<br>- Khởi tạo CloudFront Distribution làm mạng phân phối nội dung toàn cầu.<br>- Cấu hình Origin Access Control (OAC) cấp quyền cho CloudFront đọc dữ liệu từ S3. | 30/06/2026 | 30/06/2026 | Amazon CloudFront CDN Setup |
-| **Tư** | **Định tuyến thông minh:**<br>- Bổ sung ALB làm Origin thứ 2 trong CloudFront.<br>- Thiết lập Behaviors để chia luồng mạng: /api/* điều hướng về ALB, luồng mặc định về S3. | 01/07/2026 | 01/07/2026 | CloudFront Dynamic Routing |
-| **Năm** | **Bảo mật Tầng Biên (WAF):**<br>- Kích hoạt tính năng bảo mật AWS WAF gắn kèm CloudFront.<br>- Bổ sung các tập luật (Managed Rules) của AWS để chặn IPs độc hại. | 02/07/2026 | 02/07/2026 | AWS WAF Rule Groups |
-| **Sáu** | **Bảo vệ CSDL:**<br>- Tinh chỉnh cấu hình WAF, thêm lá chắn SQL Injection để bảo vệ tối đa tầng RDS nằm sâu bên trong. | 03/07/2026 | 03/07/2026 | OWASP Mitigation on AWS |
+| **Hai** | **Lưu trữ tĩnh (S3 Hosting):**<br>- Cấu hình Amazon S3 Bucket chứa mã nguồn Frontend PawVerse.<br>- Khóa chặt toàn bộ truy cập công cộng (Block all public access). | 29/06/2026 | 29/06/2026 | |
+| **Ba** | **Phân phối CDN (CloudFront):**<br>- Khởi tạo CloudFront Distribution làm mạng phân phối nội dung toàn cầu.<br>- Cấu hình Origin Access Control (OAC) cấp quyền cho CloudFront đọc dữ liệu từ S3. | 30/06/2026 | 30/06/2026 |  |
+| **Tư** | **Định tuyến thông minh:**<br>- Bổ sung ALB làm Origin thứ 2 trong CloudFront.<br>- Thiết lập Behaviors để chia luồng mạng: /api/* điều hướng về ALB, luồng mặc định về S3. | 01/07/2026 | 01/07/2026 |  |
+| **Năm** | **Bảo mật Tầng Biên (WAF):**<br>- Kích hoạt tính năng bảo mật AWS WAF gắn kèm CloudFront.<br>- Bổ sung các tập luật (Managed Rules) của AWS để chặn IPs độc hại. | 02/07/2026 | 02/07/2026 |  |
+| **Sáu** | **Bảo vệ CSDL:**<br>- Tinh chỉnh cấu hình WAF, thêm lá chắn SQL Injection để bảo vệ tối đa tầng RDS nằm sâu bên trong. | 03/07/2026 | 03/07/2026 |  |
 
 ### Kết quả đạt được:
 * **Tối ưu tốc độ tải trang:** Giao diện Frontend được phân phối qua các điểm Edge Location của CloudFront giúp giảm thiểu độ trễ tối đa cho người dùng toàn cầu.
